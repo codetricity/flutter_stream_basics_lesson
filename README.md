@@ -5,7 +5,7 @@
 
 The Dart stream is based on an Observer pattern.  The pattern consists of three pieces:
 
-* _Sinks_ Central source for the whole process. This is how data is added. StreamController is the main sink.
+* _Sinks_ This is how data is added. StreamController is the main sink.
 * _Streams_ are properties on the Sink. When the sink needs to notify listeners of new events, it does so via streams.
 * _Subscribers_ are the external classes or objects that are waiting to be notified. This is done by listening to streams.
 
