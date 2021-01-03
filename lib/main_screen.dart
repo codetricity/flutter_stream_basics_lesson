@@ -30,7 +30,6 @@ class MainScreen extends StatelessWidget {
                 width: 300,
                 color: boxColor,
               );
-              // return Text(contacts ?? 'Hello');
             },
           ),
           Padding(

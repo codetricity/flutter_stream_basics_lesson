@@ -7,22 +7,22 @@ void main() {
   runApp(MyApp());
 }
 
-@override
-void dispose() {
-  controller.close();
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
 }
 
-var controller = StreamController.broadcast();
+class _MyAppState extends State<MyApp> {
+  final StreamController controller = StreamController();
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  void dispose() {
+    controller.close();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: Scaffold(
         body: MainScreen(
           controller: controller,
